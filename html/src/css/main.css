@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
 
+
+
 .main-wrapper {
     
     max-height: 100vh;
@@ -8,6 +10,11 @@
     font-family: Lato;
     padding-left: 10%;
     padding-right: 10%;        
+}
+
+.main-wrapper-inner{
+    /* use this to bring it down for larger phone sizes */
+    padding-top: 10%;
 }
 
 body{
@@ -62,11 +69,39 @@ p {
 .scan-btn{
     text-align: center;      
     background: grey;
-    border-radius: 100px;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    max-height: 30px;
+    border-radius: 100px;    
+    /* max-height: 30px; */
+    margin-top: 20%;
+    
+}
+
+.scan-btn-inner{
+    height: 60px;
+    
+}
+
+h5.scan-text {
+    position: relative;
+    top: 35%;
 }
     
+
+@media only screen and (max-height: 600px) {
+    .main-wrapper-inner{
+        /* for iphone 5 or lower screen res */
+        padding-top: 0%;
+    }
+}
+
+@media only screen and (min-height : 700px){
+    
+    /* for Iphone X / google pixel2 */
+
+    .header{
+        
+        margin-bottom: 25%;       
+        
+    }   
+}
     
     
