@@ -1,15 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
 .main-wrapper {
-    width: 100%; 
+    
     max-height: 100vh;
     height: 100vh; 
     margin: 0 auto; 
-        
+    font-family: Lato;
+    padding-left: 10%;
+    padding-right: 10%;        
 }
 
 body{
+    color: white;
+    width: 100%;
     overflow: hidden;
     margin: 0;
     padding: 0;
     background: linear-gradient(#094B8E,#1582C1); /* setting the gradient background */
+}
+
+.logo-top {
+    padding-top: 10%;
+}
+
+h3.title-text {
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 1.4pt;
+    
+}
+
+p.sub-text {
+    font-size: 12px;
+    text-align: left;  
+    width: 70%;  
+    line-height: 20px;
 }
     
