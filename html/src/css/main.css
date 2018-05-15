@@ -30,10 +30,42 @@ h3.title-text {
     
 }
 
-p.sub-text {
-    font-size: 12px;
+p.btn-text{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+p.sub-text {    
     text-align: left;  
     width: 70%;  
     line-height: 20px;
 }
+
+p {
+    font-size: 12px;
+}
+
+.btn-inner{
+    text-align: center;
+}
+
+.btn {
+    padding-top: 5%;
+    background: rgba(255,255,255,0.34);
+}
+
+.action-button-section{
+    padding-top: 5%;
+}
+
+.scan-btn{
+    text-align: center;      
+    background: grey;
+    border-radius: 100px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+    
+    
     
