@@ -8,13 +8,13 @@ function include(filename)
 }
 
 include('http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
-var endpoint = ""; /* place our end point here */
 var endpoint = "https://httpbin.org/get";
      var rest = $.getJSON(endpoint, function(){
          console.log("success");
      }).done(function(data){
          console.log("second success, YAY from api.js");
          console.log(data);
+         console.log(JSON.stringify(data));
      })
      .fail(function(){
          console.log("error");
