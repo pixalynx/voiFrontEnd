@@ -8,7 +8,9 @@ function include(filename)
 }
 
 include('http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
+/* Place in the endpoint for the VOI Backend here */
 var endpoint = "https://httpbin.org/get";
+/* Place in the endpoint for the VOI Backend here */
      var rest = $.getJSON(endpoint, function(){
          console.log("success");
      }).done(function(data){
@@ -26,3 +28,5 @@ var endpoint = "https://httpbin.org/get";
      rest.complete(function(){
          console.log("second complete");
      })
+
+
