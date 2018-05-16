@@ -68,10 +68,11 @@ p {
 
 .scan-btn{
     text-align: center;      
-    background: grey;
+    background: #dddddd;
     border-radius: 100px;    
     /* max-height: 30px; */
     margin-top: 20%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     
 }
 
@@ -83,13 +84,19 @@ p {
 h5.scan-text {
     position: relative;
     top: 35%;
+    color: white;
+    letter-spacing: 1.56pt;
 }
     
 
 @media only screen and (max-height: 600px) {
     .main-wrapper-inner{
         /* for iphone 5 or lower screen res */
-        padding-top: 0%;
+        padding-top: 0%;        
+    }
+
+    .scan-btn{
+        margin-top: 10%;
     }
 }
 
