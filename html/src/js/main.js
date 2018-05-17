@@ -18,8 +18,12 @@ var endpoint = "https://httpbin.org/get";
 /* Place in the endpoint for the VOI Backend here */
 
 /* Declare the filestatus as false so we can do some checks */
-var filestatus1,filestatus2 = false;
+var filestatus = [false,false];
 var jFileInput = HTMLDocument;
+
+function updateButtons (){
+
+}
 
 function REST(myendpoint){
 
@@ -39,7 +43,10 @@ function REST(myendpoint){
          
     }
 
-    $('.btn-1').on('click', function() {
+    function actionButtonClicks(buttonclass){
+        var id = buttonclass.charAt(5);
+
+    $(buttonclass).on('click', function() {
         var uploadForm = document.createElement('form');
         var fileInput = uploadForm.appendChild(document.createElement('input'));
     
@@ -52,39 +59,52 @@ function REST(myendpoint){
         fileInput.click()
 
         fileInput.onchange = function(){
+            
             /* Check to see only one file is selected */
             if(fileInput.files.length === 1){
-                if(fileInput.files.item(0).type === 'images/png' || 'images/svg'
-            || 'images/jpg')
-            console.log(fileInput.files.item(0).name);
-            console.log(fileInput.files.length);
-            console.log(fileInput.files.item(0));
-            console.log(fileInput.files.type);
+                var imgString = fileInput.files.item(0).type;
+                console.log(imgString.substring(0,5));
+                /* Check if the file type is an image */
+                if(imgString.substring(0,5) === 'image'){
+
+                    console.log(fileInput.files.item(0).name);
+                    console.log(fileInput.files.length);
+                    console.log(fileInput.files.item(0));
+                    console.log(fileInput.files.type);
+                    $(buttonclass).find('.btn-inner').find('img').attr('src','../../assets/tick.svg');
+                    /* console.log(filestatus[buttonclass.charAt(5)-1]); */
+                    filestatus[buttonclass.charAt(5)-1] = true;
+                    
             
+                }else{
+                    /* if the file type is not an image then do stuff here */
+                    alert('Wrong file has been chosen');
+                }               
+                            
             }
-            else{
-                console.log('wrong file type inserted');
-            }
+            
             
         }
 
                 
     })
+}
+  
+      
 
-    
-    
 
-    $('.btn-2').on('click', function() {
-        var uploadForm = document.createElement('form');
-        var fileInput = uploadForm.appendChild(document.createElement('input'));
-    
-        fileInput.type = 'file';
-        fileInput.name = 'image-2';
-        fileInput.multiple = false;
-    
-        fileInput.click();
+    $('.scan-btn').on('click' ,function(){
+        /* Do checks before sending the req */
+        if(filestatus[0] & filestatus[1] === true){
+            alert('You can now start this scan');
+        }else{
+            alert('You cannot start this scan');
+        }        
+        REST(endpoint);        
+        
     })
 
-
 myLog();
-REST(endpoint);
+
+actionButtonClicks('.btn-1');
+actionButtonClicks('.btn-2');
