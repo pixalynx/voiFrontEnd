@@ -80,6 +80,7 @@ p {
     position: absolute;
     bottom: 10%;
     width: 80%;
+    cursor: pointer;
     
 }
 
