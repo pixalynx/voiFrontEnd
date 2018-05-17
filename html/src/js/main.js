@@ -74,6 +74,7 @@ function REST(myendpoint){
                     $(buttonclass).find('.btn-inner').find('img').attr('src','../../assets/tick.svg');
                     /* console.log(filestatus[buttonclass.charAt(5)-1]); */
                     filestatus[buttonclass.charAt(5)-1] = true;
+                    updateScanButton();
                     
             
                 }else{
@@ -96,13 +97,25 @@ function REST(myendpoint){
     $('.scan-btn').on('click' ,function(){
         /* Do checks before sending the req */
         if(filestatus[0] & filestatus[1] === true){
-            alert('You can now start this scan');
+             alert('You can now start this scan'); 
+            
         }else{
             alert('You cannot start this scan');
         }        
         REST(endpoint);        
         
     })
+
+    function updateScanButton(){
+        if(filestatus[0] & filestatus[1] === true){         
+        
+        $('.scan-btn').css('background','#a9ff3c');
+        
+    }else{
+        $('.scan-btn').css('background','#dddddd');      
+    }
+
+    }
 
 myLog();
 
