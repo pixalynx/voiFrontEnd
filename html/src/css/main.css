@@ -73,8 +73,11 @@ p {
     background: #dddddd;
     border-radius: 100px;    
     /* max-height: 30px; */
-    margin-top: 20%;
+    
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    position: absolute;
+    bottom: 5%;
+    width: 80%;
     
 }
 
@@ -84,13 +87,17 @@ p {
 }
 
 .scan-btn-inner{
-    height: 60px;
+    
+    position: relative;
+    margin: auto;
+    height: 100%; 
+    width: 50%;   
+    text-align: center;
     
 }
 
 h5.scan-text {
-    position: relative;
-    top: 35%;
+    
     color: white;
     letter-spacing: 1.56pt;
 }
