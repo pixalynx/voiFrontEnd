@@ -100,7 +100,7 @@ function REST(myendpoint){
              alert('You can now start this scan'); 
             
         }else{
-            alert('You cannot start this scan');
+            $('.sub-text').text(screen.height + ' x ' + screen.width);
         }        
         REST(endpoint);        
         
