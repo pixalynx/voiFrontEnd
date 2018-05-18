@@ -71,7 +71,7 @@ function REST(myendpoint){
                     console.log(fileInput.files.length);
                     console.log(fileInput.files.item(0));
                     console.log(fileInput.files.type);
-                    $(buttonclass).find('.btn-inner').find('img').attr('src','../../assets/tick.svg');
+                    $(buttonclass).find('.btn-inner').find('img').attr('src','./img/tick.svg');
                     /* console.log(filestatus[buttonclass.charAt(5)-1]); */
                     filestatus[buttonclass.charAt(5)-1] = true;
                     updateScanButton();
