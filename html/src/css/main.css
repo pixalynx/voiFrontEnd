@@ -114,6 +114,33 @@ h5.scan-text {
     font-size: 50px;
     overflow: hidden;
 }
+
+
+/* CSS for ConfirmView.html */
+
+.top-nav{
+    margin: 0 auto;
+    background: linear-gradient(#094B8E,#1582C1);
+    padding-left:10%;
+    padding-right: 10%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    
+}
+
+.main-wrapper-white {
+    
+    max-height: 100vh;
+    height: 100vh; 
+    margin: 0 auto; 
+    font-family: Lato;
+    background: white;    
+    
+    
+            
+}
+
+.top-nav-items{
     
 
 @media only screen and (max-height: 600px) {
