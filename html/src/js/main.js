@@ -47,15 +47,15 @@ function REST(myendpoint){
         var id = buttonclass.charAt(5);
 
     $(buttonclass).on('click', function() {
+      
+        
         var uploadForm = document.createElement('form');
         var fileInput = uploadForm.appendChild(document.createElement('input'));
-    
+        
         fileInput.type = 'file';
         fileInput.name = 'image-1';
-        fileInput.multiple = false;        
-
-        jFileInput = fileInput.HTMLDocument;
-                
+        fileInput.multiple = false;      
+                      
         fileInput.click()
        
         $('input[type="file"]').on('change', function(event){ 
@@ -81,6 +81,7 @@ function REST(myendpoint){
                     
                     filestatus[buttonclass.charAt(5)-1] = true;
                     updateScanButton();
+                    jFileInput = fileInput;
                     
             
                 }else{
@@ -103,8 +104,7 @@ function REST(myendpoint){
     $('.scan-btn').on('click' ,function(){
         /* Do checks before sending the req */
         if(filestatus[0] & filestatus[1] === true){
-            // alert('You can now start this scan'); 
-            
+            // alert('You can now start this scan');         
             
         }else{
             $('.sub-text').text(screen.height + ' x ' + screen.width);
