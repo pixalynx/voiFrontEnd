@@ -14,13 +14,13 @@
 
 .main-wrapper-inner{
     /* use this to bring it down for larger phone sizes */
-    padding-top: 10%;
+    /* padding-top: 10%; */
 }
 
 body{
     color: white;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 0;
     padding: 0;
     background: linear-gradient(#094B8E,#1582C1); /* setting the gradient background */
@@ -121,11 +121,8 @@ h5.scan-text {
 .top-nav{
     margin: 0 auto;
     background: linear-gradient(#094B8E,#1582C1);
-    padding-left:10%;
-    padding-right: 10%;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    
+    width: 100%;     
+    color: white;        
 }
 
 .main-wrapper-white {
@@ -135,12 +132,97 @@ h5.scan-text {
     margin: 0 auto; 
     font-family: Lato;
     background: white;    
-    
+    color: black;
     
             
 }
 
 .top-nav-items{
+    position: relative;
+    bottom: 15px;
+    text-align: center;
+    margin-left:10%;
+    margin-right: 10%;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    
+
+}
+
+.logo {
+    float: left;
+    position: relative;
+    top: 9px;
+    
+}
+
+.logo-text {
+    float: left;
+    padding-left: 2.5%;     
+   
+}
+
+img.logo-img {
+    width: 35px;
+    
+}
+
+p.logo-text-p {
+   text-align: center; 
+   letter-spacing: 1.1pt;
+
+}   
+
+.id-section{
+    position: relative;
+    float: left;
+    text-align: center;
+    left: 15%;
+}
+
+.licence-section{
+    position: relative;
+    float: right;
+    right: 15%;
+}
+
+.main-wrapper-inner-confirm{
+    padding-top: 10%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    
+}
+
+.profile-img{
+    border-radius: 50%;
+    width: 100px;
+}
+
+.licence-img{
+    width: 100%;
+    height: 200px;
+    object-fit: none;
+    object-position: 0px 0px 30px 100px;
+    margin-top: 5%;
+}
+
+.result-section{
+    
+    text-align: center;
+}
+
+.scn-btn-done{
+    position: fixed;
+    width: 95%;
+   background: #094B8E;  
+   text-align: center; 
+   border-radius: 40px;
+   margin-top: 10%;
+   padding-top: 2%;
+   padding-bottom: 2%;
+   color: white;
+   bottom: 3%;
+}
     
 
 @media only screen and (max-height: 600px) {
@@ -158,15 +240,40 @@ h5.scan-text {
     }
 }
 
+p.blue-res {
+    color: #094B8E;
+}
+
+span.white-res {
+    color: black;
+}
+
 @media only screen and (min-height : 700px){
     
     /* for Iphone X / google pixel2 */
 
     .header{
         
-        margin-bottom: 25%;       
+        /* margin-bottom: 25%;      */  
         
     }   
 }
+
+@media only screen and (min-width : 1500px){
+
+    .scan-btn{
+        
+        position: absolute;
+        bottom: 1%;
+        width: 80%;
+        
+    }
+
+    .action-button-section{
+        padding-bottom: 10000px;
+    }
+}
+    
+
     
     

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/input.css">
     <title>GetReqTest</title>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="js/api.js"></script>  
@@ -12,6 +13,10 @@
     $(".btn").click(function(){
         $(this).hide();
     });
+
+    $("#fileinput").change(function(){
+        alert("it works"); /* This does work */
+    })   
 });        
     </script>   
 </head>
@@ -20,7 +25,8 @@
         this is a test button
     </div>    
 
-    <input type="file" id="fileinput" />
+    <input type="file" name="file" id="fileinput" class="inputfile" />
+    <label for="fileinput">Choose a File</label>
 
 </body>
 </html>

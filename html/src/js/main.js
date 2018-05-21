@@ -57,14 +57,20 @@ function REST(myendpoint){
         jFileInput = fileInput.HTMLDocument;
                 
         fileInput.click()
+       
+        $('input[type="file"]').on('change', function(event){ 
+            console.log('changed!'); 
+       });
 
-        fileInput.onchange = function(){
+          fileInput.onchange = function(){
             
-            /* Check to see only one file is selected */
-            if(fileInput.files.length === 1){
+            $('.title-text').text('testing other devices');
+           
+            
                 var imgString = fileInput.files.item(0).type;
                 console.log(imgString.substring(0,5));
-                /* Check if the file type is an image */
+                $('.sub-text').text(imgString);
+                
                 if(imgString.substring(0,5) === 'image'){
 
                     console.log(fileInput.files.item(0).name);
@@ -72,20 +78,20 @@ function REST(myendpoint){
                     console.log(fileInput.files.item(0));
                     console.log(fileInput.files.type);
                     $(buttonclass).find('.btn-inner').find('img').attr('src','./img/tick.svg');
-                    /* console.log(filestatus[buttonclass.charAt(5)-1]); */
+                    
                     filestatus[buttonclass.charAt(5)-1] = true;
                     updateScanButton();
                     
             
                 }else{
-                    /* if the file type is not an image then do stuff here */
+                    
                     alert('Wrong file has been chosen');
                 }               
                             
-            }
             
             
-        }
+            
+        }  
 
                 
     })
