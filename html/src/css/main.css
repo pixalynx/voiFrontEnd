@@ -222,6 +222,12 @@ p.logo-text-p {
    padding-bottom: 2%;
    color: white;
    bottom: 3%;
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+p.done-text {
+    letter-spacing: 1.2pt;
+    font-weight: bold;
 }
     
 
@@ -242,10 +248,16 @@ p.logo-text-p {
 
 p.blue-res {
     color: #094B8E;
+    font-weight: bold;
 }
 
 span.white-res {
     color: black;
+    font-weight: normal;
+}
+
+p.score-res {
+    font-size: 35px;
 }
 
 @media only screen and (min-height : 700px){

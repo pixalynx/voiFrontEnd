@@ -103,7 +103,8 @@ function REST(myendpoint){
     $('.scan-btn').on('click' ,function(){
         /* Do checks before sending the req */
         if(filestatus[0] & filestatus[1] === true){
-             alert('You can now start this scan'); 
+            // alert('You can now start this scan'); 
+            
             
         }else{
             $('.sub-text').text(screen.height + ' x ' + screen.width);
