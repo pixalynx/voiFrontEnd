@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./css/input.css">
     <title>GetReqTest</title>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="js/api.js"></script>  
+    <script src="js/api.js"></script> 
+    <script src="js/upload.js"></script> 
     <script>
     $(document).ready(function(){
     $(".btn").click(function(){
@@ -25,8 +26,19 @@
         this is a test button
     </div>    
 
-    <input type="file" name="file" id="fileinput" class="inputfile" />
-    <label for="fileinput">Choose a File</label>
+    <form id="target">
+    <input type="file" name="file" id="fileinput1" class="inputfile" />
+    <label for="fileinput1">Choose a File1</label>
+
+    <input type="file" name="file" id="fileinput2" class="inputfile" />
+    <label for="fileinput2">Choose a File2</label>
+
+    <input type="submit" value="Go">
+
+    </form>
+
+    <p class="file1">file one data here</p>
+    <p class="file2">file two data here</p>
 
 </body>
 </html>
