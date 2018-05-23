@@ -3,12 +3,26 @@
 <head>
   <meta charset="utf-8"/>
   <title>upload</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://malsup.github.com/jquery.form.js"></script> 
 </head>
 <body>
-  <form action="localhost:1337/all" method="post" enctype="multipart/form-data">
+  <form action="http://localhost:1337/all" method="post" enctype="multipart/form-data" id="theform">
   <p><input type="file" name="test">
   <p><input type="file" name="test2">
   <p><button type="submit">Submit</button>
 </form>
+<div id="someDiv">
+
+</div>
+<script> $(document).ready(function() { 
+  // bind 'myForm' and provide a simple callback function 
+  $('#theform').ajaxForm(function(response) { 
+      var result = jQuery.parseJSON(response);
+      var myJSON = JSON.stringify(result);
+      $('#someDiv').text(myJSON); 
+      console.log(result);
+  }); 
+}); </script>
 </body>
 </html>
