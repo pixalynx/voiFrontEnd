@@ -5,30 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/input.css">
+    <link rel="stylesheet" href="./css/main.css">
     <title>GetReqTest</title>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="js/api.js"></script> 
     <script src="js/upload.js"></script> 
     <script>
     $(document).ready(function(){
-    $(".btn").click(function(){
+    $(".btn3").click(function(){
         $(this).hide();
     });
 
-    $("#fileinput").change(function(){
+    $("#fileinput1").change(function(){
         alert("it works"); /* This does work */
     })   
 });        
     </script>   
 </head>
 <body>
-    <div class="btn">
+    <div class="btn3">
         this is a test button
     </div>    
 
     <form id="target">
     <input type="file" name="file" id="fileinput1" class="inputfile" />
-    <label for="fileinput1">Choose a File1</label>
+    <label for="fileinput1">
+            <div class="btn">
+                    <div class="btn-inner">
+                    <img src="./img/+.svg">
+                    <p class="btn-text">
+                            Personal <br>
+                            Identification
+                    </p> <!-- end of btn-text -->
+                    </div> <!-- end of btn-inner --> 
+                </div> <!-- end of btn -->                    
+    </label>
 
     <input type="file" name="file" id="fileinput2" class="inputfile" />
     <label for="fileinput2">Choose a File2</label>

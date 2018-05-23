@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>upload</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://malsup.github.com/jquery.form.js"></script> 
+  <script src="http://jsconsole.com/js/remote.js?ffeb6286-fb68-47bd-8952-732ffce6fec5"></script>
+
+</head>
+<body>
+  <form method="post" enctype="multipart/form-data" id="theform">
+  <p><input type="file" name="test">
+  <p><input type="file" name="test2">
+  <p><button type="submit">Submit</button>
+</form>
+<div id="someDiv">
+
+</div>
+<script> $(document).ready(function() { 
+  // bind 'myForm' and provide a simple callback function 
+  $('#theform3').ajaxForm(function(response) { 
+      var result = jQuery.parseJSON(response);
+      var myJSON = JSON.stringify(result);
+      $('#someDiv').text(myJSON); 
+      console.log(result);
+  }); 
+}); 
+
+
+$(document).on('submit', '#theform', function(e){
+  e.preventDefault();
+
+  console.log('this part worked?');
+  // this part works soo far on IOS
+  //alert('this worked');
+
+  var form_data = new FormData($('#theform')[0]);
+  $.ajax({
+      type:'POST',
+      url:'http://13.236.119.50:1337/all',
+      processData: false,
+      contentType: false,
+      async: true,
+      cache: false,     
+      data : form_data,
+      success: function(response){
+        alert(response);
+        console.log(response);
+      }
+  });
+});
+
+</script>
+</body>
+</html>

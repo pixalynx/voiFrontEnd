@@ -1,3 +1,12 @@
+body{
+    color: white;
+    width: 100%;
+    /* overflow: hidden; */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#094B8E,#1582C1); /* setting the gradient background */
+}
+
 .inputfile {
     width: 0.1px;
     height: 0.1px;
@@ -5,17 +14,16 @@
     overflow: hidden;
     position: absolute;
     z-index: -1;
+    
 }
 
+/* the Style for the Choose File */
 .inputfile + label {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: white;
-    background-color: black;
-    display: inline-block;
+    
 }
 
 .inputfile:focus + label,
 .inputfile + label :hover {
-    background-color: red;
+    /* background-color: red; */
 }
+

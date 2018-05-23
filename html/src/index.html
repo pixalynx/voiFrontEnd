@@ -6,6 +6,9 @@
     <title>VOI Main Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" href="css/input.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/voi.js"></script>
     
 </head>
 <body>
@@ -23,7 +26,12 @@
         </div> <!-- end of top-text -->
     </div> <!-- end of header --> 
 
+        <form action="urlhere" method="post" enctype="multipart/form-data" id="theform">    
+
         <div class="action-button-section">
+
+                <input type="file" name="test2" id="fileinput1" class="inputfile" />
+                <label for="fileinput1">
 
             <div class="btn-1">
             <div class="btn">
@@ -37,6 +45,12 @@
             </div> <!-- end of btn -->
         </div> <!-- end of btn-1 -->
 
+        </label>
+
+
+        <input type="file" name="test" id="fileinput2" class="inputfile" />
+        <label for="fileinput2">
+
             <div class="btn-2">
             <div class="btn">
                     <div class="btn-inner">
@@ -48,9 +62,13 @@
                     </div> <!-- end of btn-inner --> 
                 </div> <!-- end of btn -->
             </div> <!-- end of btn-2 -->
+
+            </label>
                 
 
         </div> <!-- end of action-button-section -->
+
+    </form>    <!-- end of theform -->
 
         <div class="scan-btn">                      
             <div class="scan-btn-inner">
@@ -59,6 +77,7 @@
             </h5>
         </div> <!-- end of scan-btn-inner -->
         </div> <!-- end of scan-btn --> 
+        
 
         
 
@@ -66,7 +85,6 @@
 
 
 </div> <!-- end of main-wrapper-->  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/main.js"></script>
+
 </body>
 </html>
