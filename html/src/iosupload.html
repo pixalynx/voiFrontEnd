@@ -27,21 +27,15 @@
       console.log(result);
   }); 
 }); 
-
-
 $(document).on('submit', '#theform', function(e){
   e.preventDefault();
-
   console.log('this part worked?');
   // this part works soo far on IOS
   //alert('this worked');
-
   
   var form = document.getElementById("theform");
   var form_data = new FormData($('#theform')[0]);
-
   console.log(form.elements.length);
-
   for (i = 0; i < form.elements.length; i++) {
   if (form.elements[i].type == 'file') {
     if (form.elements[i].value == '') {
@@ -49,7 +43,6 @@ $(document).on('submit', '#theform', function(e){
     }
   }
 }
-
   $.ajax({
       type:'POST',
       url:'http://13.236.119.50:1337/all',
@@ -70,7 +63,6 @@ $(document).on('submit', '#theform', function(e){
       }
   });
 });
-
 </script>
 </body>
 </html>
