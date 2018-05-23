@@ -47,45 +47,52 @@ function REST(myendpoint){
         var id = buttonclass.charAt(5);
 
     $(buttonclass).on('click', function() {
+      
+        
         var uploadForm = document.createElement('form');
         var fileInput = uploadForm.appendChild(document.createElement('input'));
-    
+        
         fileInput.type = 'file';
         fileInput.name = 'image-1';
-        fileInput.multiple = false;        
-
-        jFileInput = fileInput.HTMLDocument;
-                
+        fileInput.multiple = false;      
+                      
         fileInput.click()
+       
+        $('input[type="file"]').on('change', function(event){ 
+            console.log('changed!'); 
+       });
 
-        fileInput.onchange = function(){
+          fileInput.onchange = function(){
             
-            /* Check to see only one file is selected */
-            if(fileInput.files.length === 1){
+            $('.title-text').text('testing other devices');
+           
+            
                 var imgString = fileInput.files.item(0).type;
                 console.log(imgString.substring(0,5));
-                /* Check if the file type is an image */
+                $('.sub-text').text(imgString);
+                
                 if(imgString.substring(0,5) === 'image'){
 
                     console.log(fileInput.files.item(0).name);
                     console.log(fileInput.files.length);
                     console.log(fileInput.files.item(0));
                     console.log(fileInput.files.type);
-                    $(buttonclass).find('.btn-inner').find('img').attr('src','../../assets/tick.svg');
-                    /* console.log(filestatus[buttonclass.charAt(5)-1]); */
+                    $(buttonclass).find('.btn-inner').find('img').attr('src','./img/tick.svg');
+                    
                     filestatus[buttonclass.charAt(5)-1] = true;
                     updateScanButton();
+                    jFileInput = fileInput;
                     
             
                 }else{
-                    /* if the file type is not an image then do stuff here */
+                    
                     alert('Wrong file has been chosen');
                 }               
                             
-            }
             
             
-        }
+            
+        }  
 
                 
     })
@@ -97,10 +104,10 @@ function REST(myendpoint){
     $('.scan-btn').on('click' ,function(){
         /* Do checks before sending the req */
         if(filestatus[0] & filestatus[1] === true){
-             alert('You can now start this scan'); 
+            // alert('You can now start this scan');         
             
         }else{
-            alert('You cannot start this scan');
+            $('.sub-text').text(screen.height + ' x ' + screen.width);
         }        
         REST(endpoint);        
         

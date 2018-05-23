@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+.main-wrapper {
+    
+    max-height: 100vh;
+    height: 100vh; 
+    margin: 0 auto; 
+    font-family: Lato;
+    padding-left: 10%;
+    padding-right: 10%;        
+}
+
+.main-wrapper-inner{
+    /* use this to bring it down for larger phone sizes */
+    padding-top: 10%;
+}
+
+body{
+    color: white;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav{    
+    
+    background: linear-gradient(#094B8E,#1582C1);  
+    height: 10vh;
+        
+}
+
+.top-nav-items{
+    margin-left: 10%;
+    margin-right: 10%;   
+}
+
+.logo{
+    float: left;
+}
