@@ -40,14 +40,20 @@ $(document).on('submit', '#theform', function(e){
   $.ajax({
       type:'POST',
       url:'http://13.236.119.50:1337/all',
+      enctype : 'multipart/form-data',
       processData: false,
       contentType: false,
+      crossDomain: true,  
+      dataType: "json",    
       async: true,
       cache: false,     
       data : form_data,
       success: function(response){
         alert(response);
         console.log(response);
+      },
+      error : function (e){
+        console.log('ERROR : ',e);
       }
   });
 });
