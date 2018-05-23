@@ -36,7 +36,20 @@ $(document).on('submit', '#theform', function(e){
   // this part works soo far on IOS
   //alert('this worked');
 
+  
+  var form = document.getElementById("theform");
   var form_data = new FormData($('#theform')[0]);
+
+  console.log(form.elements.length);
+
+  for (i = 0; i < form.elements.length; i++) {
+  if (form.elements[i].type == 'file') {
+    if (form.elements[i].value == '') {
+      form.elements[i].parentNode.removeChild(form.elements[i]);
+    }
+  }
+}
+
   $.ajax({
       type:'POST',
       url:'http://13.236.119.50:1337/all',
